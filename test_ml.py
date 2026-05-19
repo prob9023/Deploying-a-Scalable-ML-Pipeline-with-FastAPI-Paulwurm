@@ -1,13 +1,23 @@
 import pytest
 # TODO: add necessary import
+import numpy as np
+from ml.model import inference
+from sklearn.ensemble import RandomForestClassifier
 
 # TODO: implement the first test. Change the function name and input as needed
-def test_one():
+def test_inference_array():
     """
-    # add description for the first test
+    test that the inference function returns an array rather than another type
     """
-    # Your code here
-    pass
+    #mock model
+    model = RandomForestClassifier().fit(np.array([[1,2], [3,4]]), np.array([0,1]))
+    X_test = np.array([[5,6]])
+
+    #test inference
+    preds = inference(model,X_test)
+
+    #make assertion that it's an array
+    assert isinstance(preds, np.ndarray)
 
 
 # TODO: implement the second test. Change the function name and input as needed
