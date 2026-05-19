@@ -1,5 +1,4 @@
 import pickle
-import sklearn
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 from ml.data import process_data
 # TODO: add necessary import
@@ -87,7 +86,7 @@ def load_model(path):
     """ Loads pickle file from `path` and returns it."""
     # TODO: implement the function
     model = pickle.load(open(path, "rb"))
-
+    return model
 
 def performance_on_categorical_slice(
     data, column_name, slice_value, categorical_features, label, encoder, lb, model
@@ -127,7 +126,7 @@ def performance_on_categorical_slice(
     """
     # TODO: implement the function
     #setting the slice of data to a specific column value
-    sliced_data = data[data[column_name]] == slice_value
+    sliced_data = data[data[column_name] == slice_value]
 
     X_slice, y_slice, _, _ = process_data(
         #pass in functions values
