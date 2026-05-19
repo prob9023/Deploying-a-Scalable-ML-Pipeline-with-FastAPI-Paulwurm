@@ -29,3 +29,13 @@ Working in a command line environment is recommended for ease of use with git an
 *  Create a RESTful API using FastAPI this must implement:
     * GET on the root giving a welcome message.
     * POST that does model inference.
+      
+#Sources
+https://scikit-learn.org/stable/modules/generated/sklearn.metrics.fbeta_score.html
+https://arxiv.org/pdf/1810.03993
+https://medium.com/@petersharun97.m/saving-and-loading-a-trained-machine-learning-model-for-inferencing-8c964e118f9a
+https://docs.python.org/3/library/pickle.html
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+https://www.tensorflow.org/responsible_ai/model_card_toolkit/guide#model-card-toolkit
+https://fastapi.tiangolo.com/tutorial/testing/#using-testclient
+https://archive.ics.uci.edu/dataset/20/census+income
